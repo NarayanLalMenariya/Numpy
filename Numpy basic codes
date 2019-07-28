@@ -1,0 +1,47 @@
+1. Create 8 x 8 checkerboard:
+----------------------------------------------
+import numpy as np
+Z= np.zeros(64)
+Z=Z.reshape(8,8)
+#print(Z,"Next")
+#print(Z[0,::2])
+#print(Z[1,1::2])
+#print(Z[2,::2])
+#print(Z[3,1::2])
+
+for i in range(8):
+	if(i%2 == 0):
+		Z[i,::2] = 1
+	else:
+		Z[i,1::2] = 1
+
+print(Z)
+=============================================
+2. For a 5 x 5 matrices :
+  z=np.arange(25)
+  z=z.reshape(5,5)
+  print(z)
+  
+a) print all diagonal element using for loop:
+---------------------------------------------
+for i in range(5):
+ 	for j in range(5):
+ 		if(i==j):
+ 			print(z[i,j])
+      
+b) print lower matcrices:
+---------------------------------------------
+for i in range(5):
+ 	for j in range(5):
+ 			if(i>=j):
+ 				print(z[i,j])
+        
+c) print upper matrices:
+---------------------------------------------
+for i in range(5):
+	for j in range(5):
+		if(i<=j):
+			print(z[i,j])
+=============================================
+
+3. 
