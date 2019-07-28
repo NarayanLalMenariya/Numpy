@@ -1,5 +1,7 @@
 1. Create 8 x 8 checkerboard:
 ----------------------------------------------
+a) using for loop:
+------------------
 import numpy as np
 Z= np.zeros(64)
 Z=Z.reshape(8,8)
@@ -16,6 +18,22 @@ for i in range(8):
 		Z[i,1::2] = 1
 
 print(Z)
+
+b) using tile function:
+-----------------------
+Z = np.tile( np.array([[0,1],[1,0]]), (4,4))
+print(Z)
+
+more simplified answer:
+---------------
+#create 2 x 2 array 
+arr=np.array([[0,1],[1,0]])
+#use tile func and repeate above array for 4 x4 times
+repet=(4,4)
+z=np.tile(arr,repet)
+print(z)
+
+tile() function in python : https://www.geeksforgeeks.org/numpy-tile-python/
 =============================================
 2. For a 5 x 5 matrices :
   z=np.arange(25)
