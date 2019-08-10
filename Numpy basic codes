@@ -196,6 +196,20 @@ print v3
 
 k) What is output of following 
 ---------------------------------
-i. z = array([1,2,3])
-   print z**z
-ii. 
+i. 	z = array([1,2,3])
+   	print z**z
+ii. 	print 2<<z>>2   #left shift than right shift
+iii. 	print z < -2 #check if values of z are less than -2
+iv. 	print z < -z 
+v .	print 1j*z
+vi.	print 2+z
+vii.	print z/2/2
+viii.	print (z<z)>z
+ix.	print z<z>z
+x.	print z.any()<z.any()>z.any() 
+xi.	print z.all()<= z.all() =>z.all()
+xii.	print z.all()<= z.all() >z.all()
+
+
+
+
