@@ -195,8 +195,8 @@ v3 = v1*5
 print v3
 
 k) What is output of following 
----------------------------------
-i. 	z = array([1,2,3])
+------------------------------------
+i. 	z = array([2,4,6])
    	print z**z
 ii. 	print 2<<z>>2   #left shift than right shift
 iii. 	print z < -2 #check if values of z are less than -2
@@ -209,6 +209,25 @@ ix.	print z<z>z
 x.	print z.any()<z.any()>z.any() 
 xi.	print z.all()<= z.all() =>z.all()
 xii.	print z.all()<= z.all() >z.all()
+xiii.	print z<1
+xiv.	print z<3
+xv.	print z.any() < 1 
+xvi.	print z.all() < 3
+xvii.	print z.sort()
+
+
+https://stackoverflow.com/questions/34472814/use-a-any-or-a-all
+============================================================================
+7. From following array extract integer values.
+for example from 1.2345 integer value is 1
+from 2.03  = 2
+--------------------------------------------
+
+a) print (z-z%1)
+b) print (np.floor(z))
+c) print (np.ceil(Z)-1)
+d) print (Z.astype(int))
+e) print (np.trunc(Z))
 
 
 
