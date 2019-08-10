@@ -1,5 +1,5 @@
 1. Create 8 x 8 checkerboard:
----------------------------------------------------------
+-------------------------------------------------------------------------
 a) using for loop:
 --------------------------------------
 import numpy as np
@@ -20,7 +20,7 @@ for i in range(8):
 print(Z)
 
 b) using tile function:
----------------------------------------------------------
+--------------------------------------------------------------------------
 Z = np.tile( np.array([[0,1],[1,0]]), (4,4))
 print(Z)
 
@@ -34,7 +34,7 @@ z=np.tile(arr,repet)
 print(z)
 
 tile() function in python : https://www.geeksforgeeks.org/numpy-tile-python/
-=========================================================
+============================================================================
 2. For a 5 x 5 matrices :
   z=np.arange(25)
   z=z.reshape(5,5)
@@ -60,7 +60,7 @@ for i in range(5):
 	for j in range(5):
 		if(i<=j):
 			print(z[i,j])
-===========================================================
+=============================================================================
 
 3. Matrix multiplication using dot method :
 ---------------------------------------------
@@ -70,7 +70,7 @@ mat2 = np.ones((3,2)
 mat3 = np.dot(mat1,mat2)
 print("result ", mat3)
 
-===========================================================
+=============================================================================
 4. For an array of size 10, without using any loop 
 a). Print all values of an array where values are greater than 3
 ------------------------------
@@ -84,19 +84,118 @@ C). Replace all values from 3 to 8 with their -ve value
 ------------------------------
 Z[(Z>=3) & (Z<=8)] *= -1
 
-===========================================================
+=============================================================================
 5. sum() function in python:
 -------------------------------------
 sum(iterable, start)  
 iterable : iterable can be anything list , tuples or dictionaries ,
- but most importantly it should be numbers.
-start : this start is added to the sum of 
-numbers in the iterable. 
+ but most importantly it should be ===>>> numbers.
+start : this start is added to the sum of numbers in the iterable. 
 If start is not given in the syntax , it is assumed to be 0.
 
-a). Add all the values of array
+a). Add all the values of list, tuple and dictionary of DataType Integer
+------------------------------------------------------------------------------
+lst = range(5)
+print ("List :",lst)
+print ("Sum :", sum(lst))
 
+tpl = (0,1,2,3,4)
+print ("Tuple :", tpl)
+print ("Sum :", sum(tpl))
 
+dct = {0,1,2,3,4}
+print ("Dict :", dct)
+print ("Sum :",sum(dct))
 
+b). Predict output of following syntax
+--------------------------------------
+i. dct = {'a',1}
+   print ("Sum :",sum(dct))
+ii. z = range(5)
+   print "sum",sum(z,-1)
+   
+============================================================================
+6. Vector in python 
+-----------------------
+https://machinelearningmastery.com/gentle-introduction-vectors-machine-learning/
 
+Vectors are often represented using a lowercase character such as “v”; for example:
+v = (v1, v2, v3)
+Where v1, v2, v3 are scalar values, often real values.
 
+Vectors are also shown using a vertical representation or a column; for example:
+      v1
+v = ( v2 )
+      v3
+-----------------------------------
+# define vector
+from numpy import array
+v = array([1,2,3])
+print v
+
+Preedict output of following 
+-----------------------------------
+a) addition of same length vector
+v1 = array([1,2,3])
+v2 = array([4,5,6])
+v3 = v1 + v2
+print v3
+-----------------------------------
+b) addition of diff length verctor
+v1 = array([1,2,3])
+v2 = array([4,5,6,7,8,])
+v3 = v1 + v2
+-----------------------------------
+c) output of following 
+arr = array(['a',1])
+print arr
+-----------------------------------
+d) Addition of different dtype
+v1 = array([1,2,3])
+v2 = array([4,5,'a'])
+v3 = v1 + v2
+-----------------------------------
+e) subtraction of vector
+v1 = array([1,2,3])
+v2 = array([2,6,7])
+v3 = v1-v2
+print v3
+-----------------------------------
+f) multiplication of vector
+v1 = array([1,2,3])
+v2 = array([2,6,7])
+v3 = v1 * v2
+print v3
+-----------------------------------
+g) division of vector
+v1 = array([1,2,3])
+v2 = array([2,6,7])
+v3 = v2 / v1
+print v3
+-----------------------------------
+h) division of diff type of vector
+v1 = array([1,2,3])
+v2 = array([2.2,6.2,7])
+v3 = v2 / v1
+print v3
+-----------------------------------
+i) Dot Product
+The dot product is calculated as follows:
+a . b = (a1 * b1 + a2 * b2 + a3 * b3)
+
+v1 = array([1,2,3])
+v2 = array([2,2,2])
+v3 = v1.dot(v2)
+print v3
+
+------------------------------------
+j) vector scalar multiplication
+v1 = array([1,2,3])
+v3 = v1*5
+print v3
+
+k) What is output of following 
+---------------------------------
+i. z = array([1,2,3])
+   print z**z
+ii. 
