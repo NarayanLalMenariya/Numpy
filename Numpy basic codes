@@ -215,8 +215,17 @@ xv.	print z.any() < 1
 xvi.	print z.all() < 3
 xvii.	print z.sort()
 
-
 https://stackoverflow.com/questions/34472814/use-a-any-or-a-all
+----------------------------------------------------------------------------
+L) Replace max and min of vector with zero
+---------------------------
+Z = np.random.random(10)
+i. Replacing min with zero
+Z[Z.argmin()] = 0 
+---------------------------
+ii. Replacing max with zero
+Z[Z.argmax()] = 0
+
 ============================================================================
 7. From following array extract integer values.
 for example from 1.2345 integer value is 1
@@ -229,6 +238,44 @@ c) print (np.ceil(Z)-1)
 d) print (Z.astype(int))
 e) print (np.trunc(Z))
 
+============================================================================
+8. Create Read only array
+Z = np.zeros(10)
+Z.flags.writeable = False
+Z[0] = 1
+============================================================================
+9. Change dataType of given Integer array into
+Z = np.arange(10, dtype=np.int32)
+print Z
 
+i.Float
+---------
+Z = Z.astype(np.float32, copy=False)
+print Z
+
+ii.String 
+----------
+Z = Z.astype(np.str, copy=False)
+print Z
+
+iii. Complex
+------------
+Z = Z.astype(np.complex, copy=False)
+print Z
+==============================================================================
+10. Read content of given text file -> f1.txt separated by ,
+file content :
+1,2,3, 4, 5
+6, , , 7, 8
+ , ,9,10,11
+------------------
+Z = np.genfromtxt("f1.txt", delimiter=",")
+print Z
+
+10.a) Prdect output of followig file content using same method.
+f2.txt -> 
+1,2,3, 4, 5
+6,,,7,8, ,9,10,11
+------------------
 
 
